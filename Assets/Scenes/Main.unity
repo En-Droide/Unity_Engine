@@ -1611,6 +1611,8 @@ GameObject:
   - component: {fileID: 5524149942799408369}
   - component: {fileID: 1562308416380647232}
   - component: {fileID: 8989458793693344830}
+  - component: {fileID: 8989458793693344831}
+  - component: {fileID: 8989458793693344832}
   m_Layer: 7
   m_Name: EngineBack
   m_TagString: Untagged
@@ -1851,6 +1853,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8989458793693344831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148428832330642420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4943579e7045519419188d34cd3bc69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SeeThroughSphere: {fileID: 7627407645156936578, guid: e2ad9ed610e838d4ab543c107c3d8fac,
+    type: 3}
+--- !u!64 &8989458793693344832
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148428832330642420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1085177370303390594, guid: 57e70af6dcae603429a9b4005b7f1026, type: 3}
 --- !u!1 &9065136287866205966
 GameObject:
   m_ObjectHideFlags: 0
