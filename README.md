@@ -6,3 +6,7 @@ Notre code a tout ce qu'il faut malheureusement, lors de nos essais, quand on un
 Lors d'essais anterieurs, avec souris, nous avons bien le split et unsplit qui fonctionnent ! 
 
 Merci pour tout. 
+
+Démo : (vidéo disponible dans les fichiers si GIF de mauvaise qualité)
+
+![](https://github.com/En-Droide/Unity_Engine/blob/main/Demo%20Project.gif)
