@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScrewManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ScrewManager : MonoBehaviour
     public GameObject screw2;
     public GameObject screw3;
     public GameObject screw4;
+    public UnityEvent screwsRemoved;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,9 @@ public class ScrewManager : MonoBehaviour
                     }
                     if (screw1.activeSelf == false  && screw2.activeSelf == false && screw3.activeSelf == false && screw4.activeSelf == false)
                     {
-                        Debug.Log("true");
-
-                       
-}
+                        screwsRemoved.Invoke();
+                        Debug.Log("scr");
+                    }
                 }
             }
         }

@@ -36,7 +36,7 @@ public class SeeThrough : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log(raycastHit.transform.gameObject.name);
+                        //Debug.Log(raycastHit.transform.gameObject.name);
                     }
                 }
             }

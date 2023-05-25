@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UnsplitButton : MonoBehaviour
 {
+    public GameObject rotor;
+    public GameObject back;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +13,9 @@ public class UnsplitButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Unsplit()
     {
-        
+        rotor.GetComponent<EngineSplitting>().splitting(true);
+        back.GetComponent<EngineSplitting>().splitting(true);
     }
 }

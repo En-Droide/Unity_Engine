@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EngineSplitting : MonoBehaviour
 {
@@ -8,36 +9,36 @@ public class EngineSplitting : MonoBehaviour
     /*public Transform startMarker;*/
     public Transform endMarker;
     public float duration = 100f;
-    private bool isSplit = false;
-    private Vector3 initialPosition; 
+    private Vector3 initialPosition;
+    public UnityEvent screwsRemoved;
+    private bool localIsSplit = false;
     // Start is called before the first frame update
     void Start()
     {
-        initialPosition = transform.position; 
+        initialPosition = transform.position;
+        screwsRemoved.AddListener(startSplit);
         /*splitting();*/
     }
 
     // Update is called once per frame
-    void Update()
+    void startSplit()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            splitting();
-        }
+        Debug.Log("screw");
+        splitting(false);
+        localIsSplit = true;
     }
-    void splitting()
+    public void splitting(bool isSplit)
     {
-        if (!isSplit)
+        if (!isSplit && !localIsSplit)
         {
             StartCoroutine(split(initialPosition, endMarker.position));
            
         }
-        else
+        else if(localIsSplit)
         {
             StartCoroutine(split(endMarker.position, initialPosition));
             
         }
-        isSplit = !isSplit;
 
     }
     IEnumerator split(Vector3 start, Vector3 end)
